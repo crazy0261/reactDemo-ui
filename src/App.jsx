@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Count from './containers/Count'
-import Person from './containers/Person'
+import Count from './containers/Count' // 引入容器组件
+import Person from './containers/Person' // 引入容器组件
 
 
 export default class App extends Component {

@@ -8,5 +8,8 @@ import {createStore,applyMiddleware} from 'redux'
 import countReducer from './cont_renducer'
 // 引入redux-thunk，用于支持异步action
 import thunk from 'redux-thunk'
+// 引入redux-devtools-extension
+import{composeWithDevTools} from 'redux-devtools-extension'
+
 // 暴露 store
-export default createStore(countReducer,applyMiddleware(thunk))
+export default createStore(countReducer,composeWithDevTools(applyMiddleware(thunk)))
