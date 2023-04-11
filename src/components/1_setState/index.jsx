@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
 export default class Demo extends Component {
 
@@ -14,6 +15,7 @@ export default class Demo extends Component {
     //     })
 
           // 函数式的setState
+           toast.success("成功")
           this.setState( state => ({count:state.count +1}))
     }
 
@@ -21,6 +23,7 @@ export default class Demo extends Component {
     return (
       <div>
         <h1>当前求和为：{this.state.count}</h1>
+        <Toaster/>
         <button onClick={this.add}>点我+1</button>
       </div>
     )
